@@ -1,0 +1,28 @@
+DROP TABLE T1;
+
+CREATE TABLE T1
+(
+    NAME VARCHAR2(10 CHAR)
+);
+
+INSERT INTO T1 VALUES ('John');
+INSERT INTO T1 VALUES ('James');
+INSERT INTO T1 VALUES ('Oscar');
+
+
+PROMPT ------------------
+PROMPT LIKE WITHOUT WILDCARD
+PROMPT ------------------
+
+SET AUTOTRACE ON
+
+SELECT * FROM T1 WHERE NAME LIKE 'James';
+
+PROMPT ------------------
+PROMPT LIKE WITH WILDCARD
+PROMPT ------------------
+
+SELECT * FROM T1 WHERE NAME LIKE '%J%';
+
+
+oracle sql cost-based
